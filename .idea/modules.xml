@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file:///Developer/Vicinity/Vicinity.iml" filepath="/Developer/Vicinity/Vicinity.iml" />
+      <module fileurl="file:///Developer/Vicinity/library/library.iml" filepath="/Developer/Vicinity/library/library.iml" />
+    </modules>
+  </component>
+</project>

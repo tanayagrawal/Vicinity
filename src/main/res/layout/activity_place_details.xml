@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghost_white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/tool_bar" />
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navigate_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/mapView"
+        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="4dp">
+
+        <Button
+            android:id="@+id/navigate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/navigate"
+            android:textColor="@color/white" />
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigate_cardView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_website"
+                android:drawablePadding="4dp"
+                android:textSize="15sp"
+                android:drawableStart="@drawable/ic_action_website"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:maxLines="3"
+                android:autoLink="web"
+                android:text="@string/website_unavailable"
+                android:textColor="@color/ebony" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_phone"
+                android:drawablePadding="4dp"
+                android:textSize="15sp"
+                android:drawableStart="@drawable/ic_action_phone"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:autoLink="phone"
+                android:text="@string/phone_unavailable"
+                android:textColor="@color/ebony" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_address"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_action_address"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:maxLines="4"
+                android:textSize="15sp"
+                android:text="@string/address_unavailable"
+                android:textColor="@color/ebony" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_rating"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_action_rating"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:text="@string/rating_unavailable"
+                android:textColor="@color/ebony" />
+
+            <TextView
+                android:id="@+id/tv_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_review"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_action_review"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:text="@string/review_unavailable"
+                android:textColor="@color/ebony" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
